@@ -1,0 +1,44 @@
+.helpdesk {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #0787c7;
+  border: 3px solid #62c0e6;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.helpdesk__add-ticket-btn {
+  width: 220px;
+  margin: 40px 40px 40px 0;
+  padding: 12px 15px;
+  display: block;
+  align-self: flex-end;
+  font-size: 18px;
+  color: #efefef;
+  border: 2px solid #efefef;
+  border-radius:8px;
+  background-color: transparent;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.helpdesk__add-ticket-btn:hover {
+  border: 2px solid #f48743;
+}
+
+.helpdesk__add-ticket-btn:active {
+  border: 2px solid #f48743;
+  color: #f48743;
+}
+
+.helpdesk__list {
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}

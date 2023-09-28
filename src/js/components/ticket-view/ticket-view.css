@@ -1,0 +1,110 @@
+.ticket {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #717171;
+  background-color: #ededed;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.ticket__view {
+  display: flex;
+  align-items: center;
+  cursor: n-resize;
+}
+
+.ticket__view-check-label {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.ticket__view-custom-check {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url('../../../img/uncheck.svg') center / cover no-repeat;
+}
+
+.ticket__view-checkbox:checked+.ticket__view-custom-check {
+  background: url('../../../img/check.svg') center / cover no-repeat;
+}
+
+.ticket__view-name {
+  display: block;
+  min-width: 60%;
+  font-size: 20px;
+}
+
+.ticket__view-date {
+  display: block;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.ticket__view-btn-block {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.ticket__view-edit {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #717171;
+  border-radius: 50%;
+  margin-right: 30px;
+  background: url('../../../img/edit.svg') center/20px 20px no-repeat;
+  transition: 0.3s transform ease-in-out;
+  cursor: pointer;
+}
+
+.ticket__view-edit:hover {
+  transform: rotate(-45deg);
+}
+
+.ticket__view-edit:active {
+  transform: rotate(0deg);
+  border: none;
+  border-radius: unset;
+  background: url('../../../img/edit.svg') center/cover no-repeat;
+}
+
+.ticket__view-delete {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #717171;
+  border-radius: 50%;
+  background: url('../../../img/delete.svg') center/20px 20px no-repeat;
+  transition: 0.3s transform ease-in-out;
+  cursor: pointer;
+}
+
+.ticket__view-delete:hover {
+  transform: rotate(-360deg);
+}
+
+.ticket__view-delete:active {
+  border: none;
+  border-radius: unset;
+  background: url('../../../img/bin_delete.svg') center/cover no-repeat;
+}
+
+.ticket__descr {
+  margin-left: calc(40px + 5%);
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: 0.2s grid-template-rows ease-in-out;
+}
+
+.ticket__descr.open {
+  grid-template-rows: 1fr;
+}
